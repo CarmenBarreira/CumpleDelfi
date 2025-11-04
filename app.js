@@ -267,3 +267,35 @@ function syncAudioIcons(isPlaying) {
     toggle.setAttribute("aria-pressed", "false");
   }
 }
+
+/* ==== Portada ==== */
+var portadaMedia = document.querySelector(".portada-media");
+if (portadaMedia && PORTADA_BG) portadaMedia.style.backgroundImage = "url('" + PORTADA_BG + "')";
+
+var delfi = document.getElementById("delfiPhoto");
+if (delfi && HERO_PHOTO) delfi.src = HERO_PHOTO;
+
+var partyIcon = document.getElementById("partyIcon");
+if (partyIcon) partyIcon.src = PARTY_ICON;
+
+var portadaInner = document.querySelector(".portada-inner");
+if (portadaInner) setTimeout(function () { portadaInner.classList.add("visible"); }, 280);
+
+/* ==== Link mapa ==== */
+var comoLlegar = document.getElementById("comoLlegar");
+if (comoLlegar) comoLlegar.href = "https://maps.app.goo.gl/8hMPPE5CuvhBQKms6";
+
+
+  /* ==== Galería ==== */
+  var galleryImgs = [
+    { src: 'assets/1.jpeg', caption: 'En la panza de mi mami' },
+    { src: 'assets/2.png', caption: 'Princesa' },
+    { src: 'assets/3.jpeg', caption: 'Explorando el mundo' },
+    { src: 'assets/4.jpeg', caption: 'Abrazos de la familia' },
+    { src: 'assets/5.jpeg', caption: 'Mi momento favorito del día' },
+    { src: 'assets/6.jpeg', caption: 'Pequeños pasos' },
+    { src: 'assets/7.jpeg', caption: 'Besos y juegos' },
+    { src: 'assets/8.jpeg', caption: 'Nuestra princesita' }
+  ];
+  loadGallery(galleryImgs);
+

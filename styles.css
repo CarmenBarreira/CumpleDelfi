@@ -249,12 +249,68 @@ html {
 
 .title-fiesta {
   color: var(--accent1);
-  font-family: 'Playfair Display', serif;
+  font-family: 'freight-big-pro';
+  font-size: 35px;
+  padding-top: 12px;
+  font-weight: bolder;
+  letter-spacing: 1.5px;
 }
 
 .section-title {
   font-family: "Playfair Display", serif;
 }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+.cd-unit {
+  min-width: 80px;
+  text-align: center;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fff, #fff8fb);
+  box-shadow: 0 8px 20px rgba(58, 30, 46, .06);
+}
+
+.cd-unit.outlined {
+  border: 2px solid var(--count-border);
+  box-shadow: 0 10px 30px rgba(255, 182, 213, .07);
+}
+
+.countdown-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, .95), rgba(255, 250, 253, .96));
+  border-radius: 14px;
+  box-shadow: 0 12px 36px rgba(193, 124, 160, .06);
+  border: 1px solid rgba(203, 125, 167, .06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  padding: 1opx;
+  opacity: .98;
+}
+
+.portada-media {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.9);
+  z-index: 1;
+}
+
+.portada-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, .15), rgba(0, 0, 0, .35));
+  z-index: 1;
+}
+
 
 @media (max-width:767.98px) {
   .section-title {
