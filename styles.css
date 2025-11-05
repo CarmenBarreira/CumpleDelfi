@@ -86,11 +86,9 @@ html {
 
 }
 
-
-
 #portada {
   position: relative;
-  min-height: 100vh;
+  min-height: 95vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -153,7 +151,7 @@ html {
   font-family: "Playfair Display", serif;
   font-weight: 700;
   font-size: clamp(2.6rem, 6vw, 4rem);
-  color: #f0a9ce;
+  color: #ffffff;
   text-shadow: 0 2px 4px rgba(0, 0, 0, .35), 0 6px 16px rgba(0, 0, 0, .35);
 }
 
@@ -161,7 +159,7 @@ html {
   display: inline-block;
   font-family: "Great Vibes", cursive;
   font-size: clamp(3rem, 7vw, 5rem);
-  color: #fff;
+  color: #f0a9ce;
   text-shadow: 0 2px 4px rgba(0, 0, 0, .35), 0 6px 16px rgba(0, 0, 0, .35);
   padding: .1rem .5rem;
   border-radius: .5rem;
@@ -219,8 +217,7 @@ html {
 }
 
 .btn-cta {
-  background: linear-gradient(135deg, var(--accent1), var(--accent2));
-  color: #fff;
+  background: linear-gradient(135deg, #ff086f, #e321cf);  color: #fff;
   border-radius: 999px;
   padding: 10px 14px;
   font-weight: 700;
@@ -251,7 +248,7 @@ html {
 .title-fiesta {
   color: var(--accent1);
   font-family: 'freight-big-pro';
-  font-size: 35px;
+  font-size: 30px;
   padding-top: 12px;
   font-weight: bolder;
   letter-spacing: 1.5px;
@@ -261,10 +258,16 @@ html {
   font-family: "Playfair Display", serif;
 }
 
+#fiestaText {
+  font-size: 15px;
+  font-weight: 500px;
+}
+
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 18px;
+  padding-top: 10px;
 }
 
 .cd-unit {
