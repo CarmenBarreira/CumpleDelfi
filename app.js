@@ -288,14 +288,19 @@ if (comoLlegar) comoLlegar.href = "https://maps.app.goo.gl/8hMPPE5CuvhBQKms6";
 
   /* ==== Galería ==== */
   var galleryImgs = [
-    { src: 'assets/1.jpeg', caption: 'En la panza de mi mami' },
-    { src: 'assets/2.png', caption: 'Princesa' },
-    { src: 'assets/3.jpeg', caption: 'Explorando el mundo' },
-    { src: 'assets/4.jpeg', caption: 'Abrazos de la familia' },
-    { src: 'assets/5.jpeg', caption: 'Mi momento favorito del día' },
-    { src: 'assets/6.jpeg', caption: 'Pequeños pasos' },
-    { src: 'assets/7.jpeg', caption: 'Besos y juegos' },
-    { src: 'assets/8.jpeg', caption: 'Nuestra princesita' }
+    { src: 'assets/1.webp', caption: 'En la panza de mi mami' },
+    { src: 'assets/2.webp', caption: 'Mis primeras fotos profesionales' },
+    { src: 'assets/3.webp', caption: 'Explorando el mundo' },
+    { src: 'assets/4.webp', caption: 'Mis primeras pascuas' },
+    { src: 'assets/5.webp', caption: 'Mi momento favorito del día' },
+    { src: 'assets/6.webp', caption: 'Primer parque con mami' },
+    { src: 'assets/7.webp', caption: 'Modo fachera' },
+    { src: 'assets/8.webp', caption: 'Relajo con papi' },
+    { src: 'assets/9.webp', caption: 'Mi primer show' },
+    { src: 'assets/10.webp', caption: 'Jugando en el jardin' },
+    { src: 'assets/11.webp', caption: 'Princesita' },
+    { src: 'assets/12.webp', caption: 'Gracias por ser parte de mi vida' }
+
   ];
   loadGallery(galleryImgs);
 
