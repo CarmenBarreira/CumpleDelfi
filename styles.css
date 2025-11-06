@@ -88,12 +88,14 @@ html {
 
 #portada {
   position: relative;
-  min-height: 100dvh;
+ /* min-height: 100dvh;*/
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   overflow: hidden;
+  min-height: calc(var(--vh, 1vh) * 100);
+
 }
 
 .portada-media {
