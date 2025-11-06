@@ -128,42 +128,6 @@ function startCountdown(isoDate) {
   iv = setInterval(tick, 1000);
 }
 
-
-/* ===== Audio control ===== */
-function setupAudioToggle() {
-  var audio = document.getElementById("bgAudio");
-  var toggle = document.getElementById("audioToggle");
-  var volumeControl = document.getElementById("audioVolume");
-
-  if (!toggle || !audio) return;
-  if (AUDIO_SRC) audio.src = AUDIO_SRC;
-
-  audio.play().then(function () {
-    syncAudioIcons(true);
-  }).catch(function () {
-    syncAudioIcons(false);
-  });
-
-  toggle.addEventListener("click", function () {
-    if (audio.paused) {
-      audio.play().catch(function (err) { console.warn("Autoplay bloqueado", err); });
-    } else {
-      audio.pause();
-    }
-  });
-
-  if (volumeControl) {
-    audio.volume = (typeof volumeControl.value !== "undefined" ? volumeControl.value : 1);
-    volumeControl.addEventListener("input", function () {
-      audio.volume = volumeControl.value;
-    });
-  }
-
-  audio.addEventListener("play", function () { syncAudioIcons(true); });
-  audio.addEventListener("pause", function () { syncAudioIcons(false); });
-  audio.addEventListener("ended", function () { syncAudioIcons(false); });
-}
-
 /* ===== RSVP helpers ===== */
 function initRsvp() {
   var openMain = document.getElementById("openFormBtnMain");
@@ -251,12 +215,51 @@ function createConfettiEngine(canvasId) {
   };
 }
 
+function setupAudioToggle() {
+  var audio = document.getElementById("bgAudio");
+  var toggle = document.getElementById("audioToggle");
+  var volumeControl = document.getElementById("audioVolume");
+
+  if (!toggle || !audio) return;
+  if (AUDIO_SRC) audio.src = AUDIO_SRC;
+
+  audio.play().then(function () {
+    syncAudioIcons(true);
+  }).catch(function () {
+    syncAudioIcons(false);
+  });
+
+  toggle.addEventListener("click", function () {
+    if (audio.paused) {
+      audio.play().then(function () {
+        syncAudioIcons(true);
+      }).catch(function (err) {
+        console.warn("Autoplay bloqueado incluso al click:", err);
+      });
+    } else {
+      audio.pause();
+      syncAudioIcons(false);
+    }
+  });
+
+  if (volumeControl) {
+    audio.volume = (typeof volumeControl.value !== "undefined" ? volumeControl.value : 1);
+    volumeControl.addEventListener("input", function () {
+      audio.volume = volumeControl.value;
+    });
+  }
+
+  audio.addEventListener("play", function () { syncAudioIcons(true); });
+  audio.addEventListener("pause", function () { syncAudioIcons(false); });
+  audio.addEventListener("ended", function () { syncAudioIcons(false); });
+}
 
 function syncAudioIcons(isPlaying) {
   var playI = document.getElementById("audioPlay");
   var pauseI = document.getElementById("audioPause");
   var toggle = document.getElementById("audioToggle");
   if (!playI || !pauseI || !toggle) return;
+
   if (isPlaying) {
     playI.classList.add("hidden");
     pauseI.classList.remove("hidden");
@@ -267,6 +270,7 @@ function syncAudioIcons(isPlaying) {
     toggle.setAttribute("aria-pressed", "false");
   }
 }
+
 
 /* ==== Portada ==== */
 var portadaMedia = document.querySelector(".portada-media");
