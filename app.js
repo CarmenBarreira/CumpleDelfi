@@ -1,5 +1,5 @@
 
-const EVENT_DATE_ISO = "2025-12-06T18:30:00-03:00"; // hora local (GMT-3)
+const EVENT_DATE_ISO = "2025-12-06T18:00:00-03:00"; // hora local (GMT-3)
 const KID_NAME = "Delfina";
 const PORTADA_BG = "assets/portada_delfi.webp";
 const HERO_PHOTO = "assets/portada_delfi.webp";
