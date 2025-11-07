@@ -6,7 +6,7 @@ const HERO_PHOTO = "assets/portada_delfi.webp";
 const PARTY_ICON = "assets/icono-fiesta.svg";
 const AUDIO_SRC = "assets/musica.mp3";
 const phone = '59894857166';
-const message = 'Hola, confirmo la asistencia al cumple 🎉';
+const message = 'Hola, confirmo la asistencia al cumple 🎉 y quería decir que se nota Nico es un genio total 😛 😂';
 
 var confettiEngine = null;
 
